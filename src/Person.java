@@ -10,10 +10,26 @@ public class Person {
     String jobTitle;
 
     public Person(String name, int yearOfBirth, String town, String jobTitle) {
-        this.yearOfBirth = yearOfBirth;
-        this.name = name;
-        this.town = town;
-        this.jobTitle = jobTitle;
+        if (yearOfBirth <=0) {
+            this.yearOfBirth = 0;
+        } else {
+            this.yearOfBirth = yearOfBirth;
+        }
+        if (name == null || name == "") {
+            this.name = "Информация не указана";
+        } else {
+            this.name = name;
+        }
+        if (town == null || town == "") {
+            this.town = "Информация не указана";
+        } else {
+            this.town = town;
+        }
+        if (jobTitle == null || jobTitle == "") {
+            this.jobTitle = "Информация не указана";
+        } else {
+            this.jobTitle = jobTitle;
+        }
     }
 
     public void acquaintance () {
